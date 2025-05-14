@@ -1,0 +1,80 @@
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: linear-gradient(to bottom, #87ceeb, #fefefe);
+  transition: background 1s;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.app {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.85);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  width: 300px;
+}
+
+.search input {
+  width: 70%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.search button {
+  padding: 10px;
+  margin-top: 10px;
+  border: none;
+  background-color: #3498db;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.weather-card {
+  margin-top: 20px;
+}
+
+.weather-icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 15px;
+}
+
+.sunny {
+  background: radial-gradient(circle at center, #FFD700 40%, #FFA500 60%);
+  border-radius: 50%;
+  animation: spin 4s linear infinite;
+}
+
+.cloudy {
+  position: relative;
+}
+.cloudy::before,
+.cloudy::after {
+  content: '';
+  position: absolute;
+  background: #ccc;
+  border-radius: 50%;
+}
+.cloudy::before {
+  width: 60px;
+  height: 60px;
+  left: 10px;
+  top: 10px;
+}
+.cloudy::after {
+  width: 50px;
+  height: 50px;
+  left: 40px;
+  top: 0;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0); }
+  100% { transform: rotate(360deg); }
+}
